@@ -1,6 +1,7 @@
 const wrapper=document.querySelector(".wrapper"),
 qrInput =wrapper.querySelector(".form input"),
 generateBtn =wrapper.querySelector(".form button"),
+savebtn =wrapper.querySelector(".l-btn"),
 qrImg= wrapper.querySelector(".qr-code img");
 
 generateBtn.addEventListener("click", () => {
@@ -21,4 +22,9 @@ qrInput.addEventListener("keyup", () =>{
     if(!qrInput.value){
         wrapper.classList.remove("active");
     }
-})
+});
+
+function printorsave() {
+   print();
+}
+ savebtn.addEventListener("click",printorsave);
